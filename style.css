@@ -1,27 +1,30 @@
-body, h1, h2, h3, h4, p, ul {
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9fa;
+  color: #333;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: #eef6f9;
-  color: #333;
   line-height: 1.8;
 }
 
+/* Header */
 header {
-  background-color: #0077b6;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-top: 0.5rem;
+  padding: 0;
 }
 
 nav ul li {
@@ -31,45 +34,65 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
+nav ul li a:hover {
+  color: #ffd166;
+}
+
+/* Hero Section */
 .hero {
-  background: #caf0f8;
+  background: linear-gradient(to right, #caf0f8, #90e0ef);
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
 
+/* Product Cards */
 .products {
   display: flex;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
 .products article {
   background: white;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  width: 250px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.products article:hover {
+  transform: translateY(-8px);
 }
 
 .products img {
-  max-width: 100%;
-  height: 150px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
 }
 
+.products h3 {
+  margin: 0.8rem 0 0.4rem;
+  text-align: center;
+}
+
+.products p {
+  padding: 0 1rem 1rem;
+  text-align: center;
+}
+
+/* Gallery */
 .gallery {
   padding: 2rem;
   text-align: center;
@@ -82,26 +105,34 @@ nav ul li a {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Offer Section */
 aside {
-  background: #90e0ef;
+  background: #ffd166;
   padding: 1rem;
-  margin: 1rem;
+  margin: 2rem;
+  border-radius: 8px;
   text-align: center;
-  border-left: 5px solid #0077b6;
+  font-weight: bold;
 }
 
+/* Footer */
 footer {
   background: #0077b6;
   color: white;
